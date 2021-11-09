@@ -8,23 +8,27 @@ background: rgb(0, 0, 0);
 
 header {
 margin: 10px;
-width: 98%;
+width: 95%;
 }
 
-#menu-slide {
-position: absolute;
-z-index: 10;
-top : 95px;
-left: -200px;
-border: 1px solid silver;
-border-radius: 5px;
-background-color: azure;
-width: 200px;
-height: 400px;
-transition: 0.5s ease-in;
+.row {
+  overflow:hidden;
 }
-#menu-slide.show{
-left: 0px;
+
+#menu_slide {
+  position: absolute;
+  z-index: 99;
+  left: -200px;
+  top: 97px;
+  width: 150px;
+  height: 350px;
+  background-color: rgba(219, 181, 8, 0.938);
+  border: 1px solid silver;
+  border-radius: 5px;
+  transition: 500ms ease-in;
+}
+#menu_slide.show {
+  left: 5px;
 }  
     
 #menu-mobile {
@@ -40,7 +44,11 @@ padding: 10px;
 }
 
 .col-2 {
-width: 5%;    
+  width: 5%;    
+}
+
+#nav-desktop {
+  display: none;
 }
 
 #nav-desktop ul {
@@ -50,7 +58,6 @@ flex-direction: row;
 flex-wrap: wrap;
 column-gap: 5px;
 padding: 20px;
-width: 50%;
 float: left;
 margin-left: 20px;
 margin-top: 5px;
@@ -70,29 +77,22 @@ width: 20px;
 }
 
 #banner {
-display: inline-block;
-position: relative;
-top: -15px;
+  background: url('../img/Banner.png');
+  margin: 15px;
+  padding: 50px;
 }
-
 #banner img {
 width: 100%;
 padding: 10px;
 }
 
 #banner h2 {
-  position: absolute;
-  left: 150px;
-  top: 180px;
+
   color: #f5f5f5;
   font-weight: bold;  
 }
 
 #banner p {
-  position: absolute;
-  width: 50%;
-  left: 150px;
-  top: 250px;
   font-size: 20px;
   color: #f5f5f5;
   font-weight: 150;
@@ -103,7 +103,6 @@ padding: 10px;
 }
 
 #destaques h2{
-position: absolute;
 width: 100%;
 text-align: center;
 font-size: 30px;
@@ -143,12 +142,13 @@ margin-top: -15px;
   padding: 10px;
 }
 
+#banner3 {
+  text-align: center;
+}
+
 #banner3 img {
-  width: 91%;
-  height: 450px;
-  left: 150px;
-  margin-left: 60px;
   margin-top: 30px;
+  padding: 30px;
 }
 .carousel-inner {
   width: 100%;
@@ -163,7 +163,7 @@ margin-top: -15px;
 }
 
 #mais-vendidos h2 {
-  font-family: Arial;
+font-family: Arial;
 text-align: center;
 font-size: 30px;
 color: rgb(255, 255, 255);
@@ -232,14 +232,8 @@ margin-bottom: 15px;
   border-radius: 5px; 
 }
 
-#banner2 {
-  margin-left: 8px;
-  width: 95%;  
-}
-
-#banner2 img {
-height: 370px;
-padding: 5px;
+#Lançamentos {
+  text-align: center;
 }
 
 #Lançamentos h1 {
@@ -250,8 +244,12 @@ padding: 5px;
   margin-bottom: 30px;
 }
 
+#Lançamentos h5 {
+  font-family: Verdana;
+  font-size: 20px;
+}
+
 .Video {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 380px;
@@ -259,11 +257,9 @@ padding: 5px;
 }
 
 .Video-2 {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 380px;
-  justify-content: center;
   margin-top: 50px;
 }
 
@@ -285,7 +281,7 @@ padding: 5px;
 }
 
 footer {
-  background-color: rgb(130, 109, 248);
+  background-color: rgba(212, 37, 14, 0.87);
   margin: 10px;
   padding: 10px;
   display: grid;
@@ -315,7 +311,7 @@ footer {
 }
 
 .img-logo {
-  width: 100px;
+  width: 98px;
 }
 
 #img-rodape, #menu-rodape {
@@ -345,24 +341,48 @@ footer {
   grid-area: menu-rodape;
 } 
 
-@media screen and (max-width: 720px) and (max-device-width: 1280px) {
+
+@media screen and (min-width: 768px) {
+
+#banner3 img {
+  width: 90%;
+  height: 480px;
+}
+
+
+.fifa-22 {
+  width: 304px;
+  margin-bottom: 210px;
+}
+
+.Battlefield-2042 {
+  margin-bottom: 201px;
+}
+
+.NBA-2K22 {
+  margin-bottom: 199px;
+}
+
+.Hades {
+  margin-bottom: 200px;
+}
+
 #nav-desktop {
-display: block;
-margin-top: 30px;
-float: right;
-}
-
-#menu-mobile {
-display: none;
-}
+  display: block;
+  margin-top: 0px;
 
 }
 
-@media screen and (min-width: 1920px) {
-
-  #menu-mobile {
+ #menu-mobile {
     display: none;
   }  
 
 }
 
+@media screen and (min-width:  1920px) {
+
+  .Cyberpunk {
+    margin-bottom: 200px;
+  }
+
+}

@@ -1,3 +1,3 @@
 $("#menu-mobile").click(()=>{
-    $("#menu-slide").toggleClass("show")
-  })
+  $("#menu_slide").toggleClass("show")
+})
